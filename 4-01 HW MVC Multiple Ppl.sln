@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-01 HW MVC Multiple Ppl", "4-01 HW MVC Multiple Ppl\4-01 HW MVC Multiple Ppl.csproj", "{95E80AA2-ED5F-40B0-A0FC-A94C04EDC556}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4-01 HW MVC Multiple Ppl", "4-01 HW MVC Multiple Ppl\4-01 HW MVC Multiple Ppl.csproj", "{95E80AA2-ED5F-40B0-A0FC-A94C04EDC556}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-01Multiple Ppl", "4-01Multiple Ppl\4-01Multiple Ppl.csproj", "{E2DFC8AF-B497-4764-A401-314A18DF7614}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{95E80AA2-ED5F-40B0-A0FC-A94C04EDC556}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95E80AA2-ED5F-40B0-A0FC-A94C04EDC556}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95E80AA2-ED5F-40B0-A0FC-A94C04EDC556}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2DFC8AF-B497-4764-A401-314A18DF7614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2DFC8AF-B497-4764-A401-314A18DF7614}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2DFC8AF-B497-4764-A401-314A18DF7614}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2DFC8AF-B497-4764-A401-314A18DF7614}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
