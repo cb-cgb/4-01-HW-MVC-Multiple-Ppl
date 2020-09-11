@@ -17,7 +17,7 @@ namespace _4_01Multiple_Ppl
         public List<Person> GetPeople()
         {
             List<Person> ppl = new List<Person>();
-            using (SqlConnection conn = new SqlConection(_connString))
+            using (SqlConnection conn = new SqlConnection(_connString))
             using (SqlCommand cmd = conn.CreateCommand())
             {
                 cmd.CommandText = "SELECT * FROM People";
@@ -48,6 +48,7 @@ namespace _4_01Multiple_Ppl
                 cmd.Parameters.AddWithValue("first", p.First);
                 cmd.Parameters.AddWithValue("last", p.Last);
                 cmd.Parameters.AddWithValue("age", p.Age);
+                conn.Open();
                 cmd.ExecuteNonQuery();
             }
         }
