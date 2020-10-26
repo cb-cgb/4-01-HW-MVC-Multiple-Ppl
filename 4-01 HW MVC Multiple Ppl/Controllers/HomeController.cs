@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using _4_01_HW_MVC_Multiple_Ppl.Models;
 using _4_01Multiple_Ppl;
+using Microsoft.AspNetCore.Http;
+
 
 namespace _4_01_HW_MVC_Multiple_Ppl.Controllers
 {
@@ -16,7 +18,14 @@ namespace _4_01_HW_MVC_Multiple_Ppl.Controllers
 
          public IActionResult Index()
         {
-            return View();
+            PersonManager pm = new PersonManager(_conn);
+            HomeViewModel vm = new HomeViewModel();
+            vm.People = pm.GetPeople();
+            if (TempData["confirmation"] != null)
+            {
+                vm.Message = (String)TempData["confirmation"];
+            }
+            return View(vm);
         }
 
         public IActionResult AddPersonForm(List<Person> ppl)
@@ -28,10 +37,14 @@ namespace _4_01_HW_MVC_Multiple_Ppl.Controllers
         public IActionResult AddPerson(List<Person> ppl)
         {
             PersonManager pm = new PersonManager(_conn);
-            foreach(Person p in ppl )
+            var pplToAdd = ppl.Where(p => !String.IsNullOrEmpty(p.First) && !String.IsNullOrEmpty(p.Last));
+           
+            foreach (Person p in pplToAdd)
             {
                 pm.AddPerson(p);
             }
+            TempData["confirmation"] = "People added successfully!";
+                        
             return Redirect("/Home/Index");
         }
     }

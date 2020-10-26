@@ -28,7 +28,7 @@ namespace _4_01Multiple_Ppl
                     ppl.Add(
                         new Person()
                         {
-                            PersonId = (int)reader["PersonId"],
+                            PersonId = (int)reader["Id"],
                             First = (string)reader["FirstName"],
                             Last = (string)reader["LastName"],
                             Age = (int)reader["Age"]

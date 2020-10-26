@@ -4,27 +4,28 @@
 <div class="row">
 
     <form id="my-form" method="post" action="/Home/AddPerson">
-        <button id="addrow"type="button" class="btn btn-success">Add Another</button>
-         <div id="rows">
-          <div class="row well">
-            <div class="col-md-3">
-                <input type="text" name="ppl[0].First" class="form-control" placeholder="First name" />
+        <button id="addrow" type="button" class="btn btn-success">Add Another</button>
+        <div id="rows">
+            <div class="row well">
+                <div class="col-md-4">
+                    <input type="text" name="ppl[0].First" class="form-control" placeholder="First name" />
+                </div>
+                <div class="col-md-4">
+                    <input type="text" name="ppl[0].Last" class="form-control" placeholder="Last name" />
+                </div>
+                <div class="col-md-4">
+                    <input type="text" name="ppl[0].Age" class="form-control" placeholder="Age" />
+                </div>
             </div>
-            <div class="col-md-3">
-                <input type="text" name="ppl[0].Last" class="form-control" placeholder="Last name" />
-            </div>
-            <div class="col-md-3">
-                <input type="text" name="ppl[0].Age" class="form-control" placeholder="Age" />
-            </div>
-         </div>
         </div>
 
 
-        <button class="btn btn-info">Submit</button>;
+        <button class="btn btn-info">Submit</button>
     </form>
 
 </div>
 
-@section Scripts {
+@section Scripts 
+{
     <script src="/js/index.js"></script>
 }
